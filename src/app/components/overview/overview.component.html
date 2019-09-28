@@ -1,0 +1,19 @@
+<div class="new-request">
+  <button mat-flat-button color="primary" (click)="openContactForm()">Create new contact request</button>
+
+  <div *ngFor="let item of contacts" class="contact-item">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{item.id}} {{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.dateOfBirth}}</mat-card-subtitle>
+        <mat-card-subtitle>{{item.email}}</mat-card-subtitle>
+        <mat-card-subtitle>{{item.gender}}</mat-card-subtitle>
+        <mat-card-subtitle>{{item.budget}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button (click)="openContact(item.id)">OPEN</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
